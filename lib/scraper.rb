@@ -12,6 +12,6 @@ class Scraper
   end
 
   def select_elements(css_element)
-    @data.css(css_element)
+    @results = @data.css(css_element)
   end
 end
