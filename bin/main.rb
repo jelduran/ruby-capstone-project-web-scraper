@@ -5,4 +5,5 @@ require 'nokogiri'
 require 'byebug'
 
 def scraper
+  nil
 end
