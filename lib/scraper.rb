@@ -9,4 +9,8 @@ class Scraper
     @html = HTTParty.get(url)
     @data = Nokogiri::HTML(@html)
   end
+
+  def select_elements(css_element)
+    @data.css(css_element)
+  end
 end
