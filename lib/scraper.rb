@@ -1,13 +1,12 @@
-require 'httparty'
+require 'open-uri'
 require 'nokogiri'
 
 class Scraper
-  attr_reader :url, :html, :data
+  attr_reader :url, :data, :results
 
   def initialize(url)
     @url = url
-    @html = HTTParty.get(url)
-    @data = Nokogiri::HTML(@html)
+    @data = Nokogiri::HTML(URI.open(url).read)
     @results = []
   end
 
