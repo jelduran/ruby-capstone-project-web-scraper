@@ -2,7 +2,8 @@ require 'open-uri'
 require 'nokogiri'
 
 class Scraper
-  attr_reader :url, :data, :results
+  attr_accessor :url
+  attr_reader :data, :results
 
   def initialize(url)
     @url = url
